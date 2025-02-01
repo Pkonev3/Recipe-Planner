@@ -1,0 +1,42 @@
+<div class="shopping-list-container">
+  <mat-card class="shopping-list-card">
+    <mat-card-header>
+      <mat-card-title>Shopping List</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="generateShoppingList()">
+          <mat-icon>add_shopping_cart</mat-icon>
+          Generate New Shopping List
+        </button>
+        <button mat-raised-button color="warn" (click)="clearShoppingList()">
+          <mat-icon>clear_all</mat-icon>
+          Clear Existing List
+        </button>
+      </div>
+
+      <form [formGroup]="shoppingForm" class="shopping-form">
+        <div formArrayName="items" class="shopping-items">
+          <div *ngFor="let item of itemsFormArray.controls; let i = index" 
+               [formGroupName]="i" 
+               class="shopping-item">
+            <mat-checkbox formControlName="bought" color="primary">
+              <span [class.bought]="item.get('bought')?.value">
+                {{ item.get('name')?.value }} - 
+                {{ item.get('amount')?.value | truncateDecimal }} 
+                {{ item.get('unit')?.value }}
+              </span>
+            </mat-checkbox>
+          </div>
+        </div>
+      </form>
+
+      
+      <div *ngIf="shoppingList.length === 0" class="empty-state">
+        <mat-icon>shopping_cart</mat-icon>
+        <p>Your shopping list is empty. Click "Generate Shopping List" to get started!</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

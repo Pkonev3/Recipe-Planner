@@ -1,0 +1,126 @@
+/* Main Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+}
+
+/* Logo */
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-right: 2rem;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  button {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    padding: 0 1.25rem;
+    height: 64px;
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    &.active-link {
+      color: white;
+      box-shadow: inset 0 -3px 0 #3498db;
+    }
+  }
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  
+  button {
+    color: white;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    height: 56px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  mat-menu {
+    min-width: 200px;
+    
+    button {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Router Outlet */
+router-outlet + * {
+  min-height: calc(100vh - 64px);
+  display: block;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  router-outlet + * {
+    padding: 1.5rem 0.5rem;
+  }
+}

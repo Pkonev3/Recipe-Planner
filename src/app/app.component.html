@@ -1,0 +1,44 @@
+<mat-toolbar class="main-header">
+  <div class="header-container">
+    <div class="header-content">
+      <a routerLink="/" class="logo-link">
+        <span class="logo">Recipe Planner</span>
+      </a>
+      
+      <nav class="desktop-nav">
+        <button mat-button routerLink="/recipe" 
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{exact: true}">
+          Recipes
+        </button>
+        <button mat-button routerLink="/add-recipe" routerLinkActive="active-link">
+          Add Recipe
+        </button>
+        <button mat-button routerLink="/ingredients" routerLinkActive="active-link">
+          Ingredients
+        </button>
+        <button mat-button routerLink="/meal-planner" routerLinkActive="active-link">
+          Meal Plan
+        </button>
+        <button mat-button routerLink="/shopping-list" routerLinkActive="active-link">
+          Shopping List
+        </button>
+      </nav>
+
+      <div class="mobile-nav">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/recipe">Recipes</button>
+          <button mat-menu-item routerLink="/add-recipe">Add Recipe</button>
+          <button mat-menu-item routerLink="/ingredients">Ingredients</button>
+          <button mat-menu-item routerLink="/meal-planner">Meal Plan</button>
+          <button mat-menu-item routerLink="/shopping-list">Shopping List</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

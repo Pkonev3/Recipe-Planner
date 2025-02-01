@@ -1,0 +1,118 @@
+<div class="container">
+  <div class="planner-layout">
+    <!-- Recipe List Section -->
+    <div class="recipes-section">
+      <h3>Available Recipes</h3>
+      
+      <div class="meal-type-filters">
+        <button mat-raised-button [class.active]="filteredMealName === 'Breakfast'" (click)="filterByMealType('Breakfast')">Breakfast</button>
+        <button mat-raised-button [class.active]="filteredMealName === 'Lunch'" (click)="filterByMealType('Lunch')">Lunch</button>
+        <button mat-raised-button [class.active]="filteredMealName === 'Dinner'" (click)="filterByMealType('Dinner')">Dinner</button>
+      </div>
+    
+      <form [formGroup]="searchForm">
+      <!-- Search Box -->
+      <div class="search-box">
+        <mat-form-field>
+          <input matInput formControlName="searchTerm" placeholder="Search recipes...">
+        </mat-form-field>
+      </div>
+    </form>
+
+      <!-- Recipe Grid -->
+      <div class="recipe-grid"
+        cdkDropList
+        #recipesList="cdkDropList"
+        [cdkDropListData]="filteredRecipes"
+        [cdkDropListConnectedTo]="getMealLists()"
+        (cdkDropListDropped)="onDrop($event)">
+        <mat-card class="recipe-card" *ngFor="let recipe of filteredRecipes" cdkDrag>
+          <div class="image-container">
+            <img mat-card-image [src]="recipe.imageUrl" [alt]="recipe.name">
+            <div class="recipe-meta">
+              <span class="cooking-time">
+                <mat-icon>schedule</mat-icon>
+                {{recipe.cookingTime}} min
+              </span>
+              <span class="difficulty" [ngClass]="recipe.difficulty.toLowerCase()">
+                {{recipe.difficulty}}
+              </span>
+            </div>
+          </div>
+          <mat-card-content>
+            <h4>{{recipe.name}}</h4>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- Weekly Planner Section -->
+    <div class="weekly-planner">
+      <div class="day-columns">
+        <div class="day-column" *ngFor="let day of calendarDays; let i = index">
+          <h4>{{ day.day }}</h4>
+          
+          <!-- Breakfast -->
+          <div class="meal-slot">
+            <span class="meal-label">Breakfast</span>
+            <div class="meal-list"
+              cdkDropList
+              [id]="'breakfast-' + i"
+              [cdkDropListData]="day.breakfast"
+              [cdkDropListConnectedTo]="[recipesList]"
+              (cdkDropListDropped)="onDrop($event)">
+              <mat-card class="recipe-card mini" *ngFor="let recipe of day.breakfast" cdkDrag>
+                <img [src]="recipe.imageUrl" [alt]="recipe.name">
+                <span class="recipe-name">{{recipe.name}}</span>
+              </mat-card>
+            </div>
+          </div>
+
+          <!-- Lunch -->
+          <div class="meal-slot">
+            <span class="meal-label">Lunch</span>
+            <div class="meal-list"
+              cdkDropList
+              [id]="'lunch-' + i"
+              [cdkDropListData]="day.lunch"
+              [cdkDropListConnectedTo]="[recipesList]"
+              (cdkDropListDropped)="onDrop($event)">
+              <mat-card class="recipe-card mini" *ngFor="let recipe of day.lunch" cdkDrag>
+                <img [src]="recipe.imageUrl" [alt]="recipe.name">
+                <span class="recipe-name">{{recipe.name}}</span>
+              </mat-card>
+            </div>
+          </div>
+
+          <!-- Dinner -->
+          <div class="meal-slot">
+            <span class="meal-label">Dinner</span>
+            <div class="meal-list"
+              cdkDropList
+              [id]="'dinner-' + i"
+              [cdkDropListData]="day.dinner"
+              [cdkDropListConnectedTo]="[recipesList]"
+              (cdkDropListDropped)="onDrop($event)">
+              <mat-card class="recipe-card mini" *ngFor="let recipe of day.dinner" cdkDrag>
+                <img [src]="recipe.imageUrl" [alt]="recipe.name">
+                <span class="recipe-name">{{recipe.name}}</span>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="actions">
+        <button class="save-button" (click)="saveMealPlan()">
+          <mat-icon>save</mat-icon>
+          Save Plan
+        </button>
+        <button class="clear-button" (click)="clearMealPlan()">
+          <mat-icon>clear_all</mat-icon>
+          Clear All
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

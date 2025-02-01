@@ -1,0 +1,70 @@
+<div class="recipe-detail-container" *ngIf="recipe">
+  <mat-card class="elevated-card">
+    <mat-card-header class="card-header">
+      <div class="header-content">
+        <mat-card-title class="recipe-title">{{ recipe.name }}</mat-card-title>
+        <div class="recipe-meta">
+          <span class="difficulty-pill {{ recipe.difficulty.toLowerCase() }}">
+            {{ recipe.difficulty }}
+          </span>
+          <div class="time-info">
+            <mat-icon>schedule</mat-icon>
+            <span>{{ recipe.cookingTime }} minutes</span>
+          </div>
+        </div>
+      </div>
+    </mat-card-header>
+
+    <div class="hero-image-container">
+      <img mat-card-image [src]="recipe.imageUrl" alt="{{ recipe.name }}" class="recipe-hero-image">
+    </div>
+
+    <mat-card-content class="card-body">
+      <section class="description-section">
+        <h3 class="section-title">
+          <mat-icon>description</mat-icon>
+          Description
+        </h3>
+        <p class="description-text">{{ recipe.description }}</p>
+      </section>
+
+      <div class="columns-container">
+        <section class="ingredients-section">
+          <h3 class="section-title">
+            <mat-icon>restaurant</mat-icon>
+            Ingredients
+          </h3>
+          <mat-list class="ingredients-list">
+            <mat-list-item *ngFor="let ingredient of recipe.ingredients" class="ingredient-item">
+              <span class="ingredient-amount">{{ ingredient.amount }} {{ ingredient.unit }}</span>
+              <span class="ingredient-name">{{ ingredient.name }}</span>
+            </mat-list-item>
+          </mat-list>
+        </section>
+
+        <section class="instructions-section">
+          <h3 class="section-title">
+            <mat-icon>list_alt</mat-icon>
+            Instructions
+          </h3>
+          <ol class="instructions-list">
+            <li *ngFor="let instruction of recipe.instructions" class="instruction-step">
+              <div class="step-content">{{ instruction }}</div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions class="card-actions">
+      <button mat-stroked-button routerLink="/recipe" class="back-button">
+        <mat-icon>arrow_back</mat-icon>
+        Back to Recipes
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['/edit-recipe', recipe.id]" class="edit-button">
+        <mat-icon>edit</mat-icon>
+        Edit Recipe
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

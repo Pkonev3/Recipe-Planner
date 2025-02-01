@@ -1,0 +1,234 @@
+/* Container Layout */
+.management-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.category-card,
+.ingredient-card {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-header {
+  padding: 16px 16px 0;
+  margin-bottom: 16px;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+mat-card-subtitle {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+mat-card-content {
+  padding: 0 16px 16px;
+}
+
+/* Button Styles */
+.add-button {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #314458;
+}
+
+.add-button mat-icon {
+  margin-right: 8px;
+}
+
+/* List Styles */
+.category-list,
+.ingredient-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.category-item,
+.ingredient-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 16px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  height: auto !important;
+}
+
+.category-item:last-child,
+.ingredient-item:last-child {
+  border-bottom: none;
+}
+
+.width-100{
+  width: 100%;
+  text-align: center;
+}
+
+/* Common styling for the message container */
+.message-container {
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+/* Style for the error message */
+.error-message {
+  color: red;
+  background-color: #f8d7da;  /* Light red background */
+  border: 1px solid red;
+}
+
+/* Style for the success message */
+.success-message {
+  color: green;
+  background-color: #d4edda;  /* Light green background */
+  border: 1px solid green;
+}
+
+
+.category-name,
+.ingredient-name {
+  flex: 1;
+  margin-right: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category-actions,
+.ingredient-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Form Styles */
+.category-selector,
+.ingredient-form {
+  margin-bottom: 16px;
+}
+
+.ingredient-form {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+mat-form-field {
+  flex: 1;
+}
+
+/* Empty State Styles */
+.empty-state {
+  text-align: center;
+  padding: 32px 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.empty-state .mat-icon {
+  font-size: 48px;
+  height: 48px;
+  width: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* Dialog Styles */
+mat-dialog-content {
+  min-width: 300px;
+  padding: 16px;
+}
+
+mat-dialog-content mat-form-field {
+  width: 100%;
+}
+
+mat-dialog-actions {
+  padding: 8px 16px 16px;
+}
+
+.button-first{
+  background-color: #314458;
+  cursor:pointer;
+  color: white;
+}
+
+.text-first{
+  color: #314458;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .management-container {
+    padding: 16px;
+  }
+  
+  .ingredient-form {
+    flex-direction: column;
+  }
+  
+  .ingredient-form button {
+    width: 100%;
+    background-color: #314458;
+  }
+  
+  .category-item,
+  .ingredient-item {
+    padding: 8px !important;
+  }
+  
+  .mat-card-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Hover Effects */
+.category-item:hover,
+.ingredient-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+
+/* Custom Scrollbar */
+.category-list::-webkit-scrollbar,
+.ingredient-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.category-list::-webkit-scrollbar-track,
+.ingredient-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.category-list::-webkit-scrollbar-thumb,
+.ingredient-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.category-list::-webkit-scrollbar-thumb:hover,
+.ingredient-list::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

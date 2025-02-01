@@ -1,0 +1,431 @@
+/* Recipe Form Container */
+.recipe-form-container {
+  width: 70%;
+  max-width: 1440px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Form Header */
+mat-card-header {
+  padding: 2.5rem 3rem !important;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 16px 16px 0 0;
+  
+  mat-card-title {
+    color: #ffffff !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      margin-top: 0.75rem;
+    }
+  }
+}
+
+/* Form Content */
+mat-card-content {
+  padding: 2.5rem 3rem !important;
+}
+
+/* Form Fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 1.75rem;
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0.25rem;
+  }
+
+  .mat-form-field-outline {
+    background: #f8fafc;
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+
+  .mat-input-element {
+    color: #1a2b3c;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  mat-label {
+    color: #64748b !important;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Enhanced Buttons */
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  
+  &[mat-flat-button] {
+    padding: 0.75rem 2rem !important;
+    border: 1px solid transparent !important;
+    
+    &.primary-action {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+      color: white !important;
+      box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15) !important;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(44, 62, 80, 0.2) !important;
+      }
+    }
+    
+    &.secondary-action {
+      background: #ffffff !important;
+      color: #2c3e50 !important;
+      border: 1px solid #e0e0e0 !important;
+      
+      &:hover {
+        background: #f8fafc !important;
+      }
+    }
+  }
+  
+  &[mat-fab] {
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15) !important;
+    border: 1px solid #e0e0e0 !important;
+    
+    &:hover {
+      transform: scale(1.05) rotate(90deg);
+    }
+  }
+}
+
+/* Ingredients Section */
+.ingredients-section {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+
+  h3 {
+    color: #1a2b3c;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.75rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    
+    mat-icon {
+      color: #2c3e50;
+    }
+  }
+}
+
+.ingredient-form {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  
+  mat-form-field {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  button[mat-fab] {
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+}
+.button-text{
+  color: #304357;
+}
+
+
+.addButton{
+  background-color: #2C3E50; 
+  color:white;
+}
+
+mat-mdc-button-touch-target{
+  background-color: #2C3E50;
+}
+
+.ingredients-list {
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+
+  .ingredient-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr 0.8fr 60px;
+    padding: 1rem 1.5rem;
+    background: #f8fafc;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .ingredient-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr 0.8fr 60px;
+    align-items: center;
+    padding: 1rem 1.5rem !important;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    &:hover {
+      background: #f8fafc;
+    }
+
+    .ingredient-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      
+      button {
+        margin: 0 !important;
+        transform: translateY(-1px);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        
+        &:hover {
+          transform: translateY(-1px) scale(1.1);
+        }
+      }
+    }
+  }
+}
+/* Instructions Section */
+.instructions-section {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+
+  h3 {
+    color: #1a2b3c;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.75rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    
+    mat-icon {
+      color: #2c3e50;
+    }
+  }
+}
+
+.instruction-form {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+
+  .instruction-input {
+    flex: 1;
+    margin-top: 0.5rem;
+  }
+
+  button[mat-fab] {
+    margin-top: 0.5rem;
+  }
+}
+
+.instructions-list {
+  .instruction-item {
+    display: flex !important;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem !important;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: translateX(8px);
+    }
+    
+    .instruction-number {
+      width: 36px;
+      height: 36px;
+      background: #2c3e50;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    .instruction-content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      p {
+        margin: 0;
+        flex: 1;
+      }
+
+      button {
+        margin-left: 1rem;
+        transform: translateY(-1px);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        
+        &:hover {
+          transform: translateY(-1px) scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Error States */
+mat-error {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #c62828;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  
+  mat-icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .recipe-form-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 992px) {
+  .recipe-form-container {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+  
+  mat-card-content {
+    padding: 2rem !important;
+  }
+  
+  .form-row,
+  .ingredient-form {
+    grid-template-columns: 1fr;
+    
+    button[mat-fab] {
+      justify-self: center;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .instruction-form {
+    flex-direction: column;
+    
+    button[mat-fab] {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .recipe-form-container {
+    width: 95%;
+    margin: 1rem auto;
+    border-radius: 12px;
+  }
+  
+  mat-card-header {
+    padding: 2rem 1.5rem !important;
+    
+    mat-card-title {
+      font-size: 1.8rem !important;
+    }
+  }
+  
+  .ingredients-list {
+    .ingredient-item {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      position: relative;
+      
+      .ingredient-actions {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .instruction-item {
+    gap: 1rem;
+    
+    .instruction-content {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      button {
+        align-self: flex-end;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    
+    button {
+      width: 100%;
+    }
+  }
+}

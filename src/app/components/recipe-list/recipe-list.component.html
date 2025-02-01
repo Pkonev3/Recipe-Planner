@@ -1,0 +1,136 @@
+<div class="recipe-container">
+  <div class="header-section">
+    <h1 class="main-title">Recipe Collection</h1>
+    
+    <form [formGroup]="filterForm" class="controls">
+      <div class="search-bar">
+        <mat-form-field appearance="outline" class="search-field">
+          <mat-icon matPrefix>search</mat-icon>
+          <input matInput formControlName="name" placeholder="Search your favorite recipes...">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="category-field">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="category">
+            <mat-option value="">All Categories</mat-option>
+            <mat-option *ngFor="let category of categories" [value]="category.name">
+              {{category.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="ingredient-category-field">
+          <mat-label>Ingredient Category</mat-label>
+          <mat-select formControlName="ingredientCategory">
+            <mat-option value="">All Ingredient Categories</mat-option>
+            <mat-option *ngFor="let ingredientCategory of ingredientCategories" [value]="ingredientCategory.name">
+              {{ingredientCategory.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" class="reset-btn" (click)="resetFilters()">
+          Reset
+        </button>
+      </div>
+
+      <div class="view-toggle">
+        <button mat-button 
+          [class.active]="isGridView" 
+          (click)="toggleView('grid')">
+          <mat-icon>grid_view</mat-icon>
+        </button>
+        <button mat-button 
+          [class.active]="!isGridView" 
+          (click)="toggleView('list')">
+          <mat-icon>view_list</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Grid View -->
+  <div class="recipe-grid" *ngIf="isGridView" >
+    <mat-card class="recipe-card" *ngFor="let recipe of recipes">
+      <div class="image-container">
+        <img mat-card-image [src]="recipe.imageUrl" [alt]="recipe.name">
+        <div class="recipe-overlay">
+          <span class="cooking-time">
+            <mat-icon>schedule</mat-icon>
+            {{recipe.cookingTime}} min
+          </span>
+        </div>
+      </div>
+      
+      <mat-card-content>
+        <h2>{{recipe.name}}</h2>
+        <p class="description">{{recipe.description | slice:0:100}}...</p>
+        <div class="recipe-meta">
+          <span class="difficulty" [ngClass]="recipe.difficulty.toLowerCase()">
+            {{recipe.difficulty}}
+          </span>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <div class="left-actions">
+          <button mat-button color="primary" [routerLink]="['/recipe', recipe.id]">
+            <mat-icon>visibility</mat-icon> View
+          </button>
+          <button mat-button color="accent" [routerLink]="['/edit-recipe', recipe.id]">
+            <mat-icon>edit</mat-icon> Edit
+          </button>
+          <button mat-button color="warn" (click)="deleteRecipe(recipe.id)">
+            <mat-icon>delete</mat-icon> Delete
+          </button>
+        </div>
+        <button mat-icon-button color="warn" (click)="toggleFavorite(recipe)" class="favorite-button">
+          <mat-icon>{{ recipe.isFavorite ? 'star' : 'star_border' }}</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- List View -->
+  <div class="recipe-list" *ngIf="!isGridView" >
+    <mat-card class="recipe-list-item" *ngFor="let recipe of recipes">
+      <div class="list-image-container">
+        <img [src]="recipe.imageUrl" [alt]="recipe.name">
+        <div class="recipe-overlay">
+          <span class="cooking-time">
+            <mat-icon>schedule</mat-icon>
+            {{recipe.cookingTime}} min
+          </span>
+        </div>
+      </div>
+
+      <div class="list-content">
+        <div class="list-header">
+          <h2>{{recipe.name}}</h2>
+          <span class="difficulty" [ngClass]="recipe.difficulty.toLowerCase()">
+            {{recipe.difficulty}}
+          </span>
+        </div>
+        
+        <p>{{recipe.description | slice:0:150}}...</p>
+        
+        <div class="list-actions">
+          <div class="left-actions">
+            <button mat-stroked-button color="primary" [routerLink]="['/recipe', recipe.id]">
+              <mat-icon>visibility</mat-icon> View Details
+            </button>
+            <button mat-stroked-button color="primary" color="accent" [routerLink]="['/edit-recipe', recipe.id]">
+              <mat-icon>edit</mat-icon> Edit Recipe
+            </button>
+            <button mat-stroked-button color="primary" color="warn" (click)="deleteRecipe(recipe.id)">
+              <mat-icon>delete</mat-icon> Delete Recipe
+            </button>
+          </div>
+          <button mat-icon-button color="warn" (click)="toggleFavorite(recipe)" class="favorite-button">
+            <mat-icon color="primary">{{ recipe.isFavorite ? 'star' : 'star_border' }}</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

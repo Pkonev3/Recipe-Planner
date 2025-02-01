@@ -1,0 +1,1307 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "name": "Spaghetti Bolognese",
+      "description": "A rich and savory pasta dish featuring a slow-cooked tomato and beef sauce served over al dente spaghetti. Garnished with fresh parsley and grated Parmesan cheese.",
+      "ingredients": [
+        {
+          "category": "Pantry Staples",
+          "name": "Spaghetti",
+          "amount": 0.5,
+          "unit": "kg"
+        },
+        {
+          "category": "Meat",
+          "name": "Ground Beef",
+          "amount": 0.3,
+          "unit": "kg"
+        },
+        {
+          "category": "Herbs and Spices",
+          "name": "Basil",
+          "amount": 10,
+          "unit": "kg"
+        },
+        {
+          "category": "Meat",
+          "name": "Ground Beef",
+          "amount": 500,
+          "unit": "g"
+        }
+      ],
+      "instructions": [
+        "Cook spaghetti until al dente.",
+        "Prepare the meat sauce with tomatoes, garlic, and spices.",
+        "Combine and garnish with Parmesan cheese."
+      ],
+      "isFavorite": true,
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Moderate",
+      "category": "Dinner",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Margherita Pizza",
+      "description": "A traditional Italian pizza with a thin crust topped with fresh tomato sauce, mozzarella cheese, and basil leaves.",
+      "ingredients": [
+        {
+          "category": "Pantry Staples",
+          "name": "Pizza Dough",
+          "amount": 1,
+          "unit": "piece"
+        },
+        {
+          "category": "Dairy",
+          "name": "Mozzarella",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "category": "Herbs and Spices",
+          "name": "Basil",
+          "amount": 30,
+          "unit": "g"
+        }
+      ],
+      "instructions": [
+        "Spread tomato sauce over the dough.",
+        "Add mozzarella and basil.",
+        "Bake in the oven at 220°C for 15 minutes."
+      ],
+      "isFavorite": true,
+      "cookingTime": 30,
+      "servings": 2,
+      "difficulty": "Easy",
+      "category": "Snack",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Caesar Salad",
+      "description": "A refreshing salad with crisp romaine lettuce, crunchy croutons, Parmesan cheese, and Caesar dressing.",
+      "ingredients": [
+        {
+          "category": "Vegetables",
+          "name": "Romaine Lettuce",
+          "amount": 1,
+          "unit": "piece"
+        },
+        {
+          "category": "Pantry Staples",
+          "name": "Croutons",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "category": "Meat",
+          "name": "Ground Beef",
+          "amount": 200,
+          "unit": "g"
+        }
+      ],
+      "instructions": [
+        "Wash and chop lettuce.",
+        "Add croutons, Parmesan, and Caesar dressing.",
+        "Toss gently and serve."
+      ],
+      "isFavorite": true,
+      "cookingTime": 15,
+      "servings": 2,
+      "difficulty": "Easy",
+      "category": "Lunch",
+      "imageUrl": "https://www.eatbetter.de/sites/eatbetter.de/files/styles/700_530/public/2020-04/knackiger_caesar_salad_mit_erfrischendem_joghurt_dressing_62493.jpg?h=4521fff0&itok=W-7qkWC0"
+    },
+    {
+      "id": "4",
+      "name": "Tacos",
+      "description": "Mexican-style tacos filled with spiced beef, lettuce, cheese, and salsa.",
+      "ingredients": [
+        {
+          "category": "Meat",
+          "name": "Ground Beef",
+          "amount": 0.2,
+          "unit": "kg"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Lettuce",
+          "amount": 0.1,
+          "unit": "kg"
+        }
+      ],
+      "instructions": [
+        "Cook ground beef with spices.",
+        "Assemble tacos with toppings.",
+        "Serve with salsa and lime."
+      ],
+      "isFavorite": true,
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Moderate",
+      "category": "Dinner",
+      "imageUrl": "https://media.istockphoto.com/id/1333647378/photo/homemade-american-soft-shell-beef-tacos.jpg?s=612x612&w=0&k=20&c=ZHhpFNbH_BO4MaXzmcKLjC4cPRptdXlp6IVUfs1sBEs="
+    },
+    {
+      "id": "5",
+      "name": "Cheesecake",
+      "description": "A creamy dessert made with a biscuit base and a rich cheese filling.",
+      "ingredients": [
+        {
+          "category": "Dairy",
+          "name": "Cream Cheese",
+          "amount": 0.5,
+          "unit": "kg"
+        },
+        {
+          "category": "Pantry Staples",
+          "name": "Digestive Biscuits",
+          "amount": 200,
+          "unit": "g"
+        }
+      ],
+      "instructions": [
+        "Crush biscuits and press into a pan.",
+        "Mix cream cheese with sugar and pour over the base.",
+        "Chill in the refrigerator."
+      ],
+      "isFavorite": true,
+      "cookingTime": 180,
+      "servings": 8,
+      "difficulty": "Difficult",
+      "category": "Dessert",
+      "imageUrl": "https://www.shutterstock.com/image-photo/decadent-strawberry-cheesecake-topped-vibrant-600nw-2486100037.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Beef Tacos",
+      "description": "Mexican-style beef tacos with various toppings.",
+      "ingredients": [
+        {
+          "category": "Meat",
+          "name": "Ground Beef",
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Tomatoes",
+          "amount": 2,
+          "unit": "whole"
+        },
+        {
+          "category": "Dairy",
+          "name": "Cheese",
+          "amount": 50,
+          "unit": "g"
+        }
+      ],
+      "instructions": [
+        "Cook ground beef until brown.",
+        "Chop tomatoes and prepare toppings.",
+        "Assemble tacos with beef, tomatoes, and cheese."
+      ],
+      "isFavorite": true,
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Easy",
+      "category": "Dinner",
+      "imageUrl": "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Spaghetti Bolognese",
+      "description": "Classic Italian pasta with a rich Bolognese sauce.",
+      "ingredients": [
+        {
+          "category": "Pasta",
+          "name": "Spaghetti",
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "category": "Meat",
+          "name": "Ground Beef",
+          "amount": 400,
+          "unit": "g"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Onion",
+          "amount": 1,
+          "unit": "whole"
+        }
+      ],
+      "instructions": [
+        "Cook spaghetti according to package instructions.",
+        "Brown the beef and onions in a pan.",
+        "Simmer with tomato sauce until thickened."
+      ],
+      "isFavorite": true,
+      "cookingTime": 45,
+      "servings": 4,
+      "difficulty": "Moderate",
+      "category": "Dinner",
+      "imageUrl": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Chicken Fajitas",
+      "description": "Delicious chicken fajitas with bell peppers and onions.",
+      "ingredients": [
+        {
+          "category": "Meat",
+          "name": "Chicken Breast",
+          "amount": 400,
+          "unit": "g"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Bell Peppers",
+          "amount": 3,
+          "unit": "whole"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Onions",
+          "amount": 2,
+          "unit": "whole"
+        },
+        {
+          "category": "Spices",
+          "name": "Fajita Seasoning",
+          "amount": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        "Slice chicken and vegetables.",
+        "Cook chicken in a pan with fajita seasoning.",
+        "Add vegetables and cook until tender.",
+        "Serve with tortillas and toppings."
+      ],
+      "isFavorite": true,
+      "cookingTime": 25,
+      "servings": 4,
+      "difficulty": "Easy",
+      "category": "Dinner",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS64InTV1cTxHMJckhEIlxUkkxR1NPdkTlYRw&s"
+    },
+    {
+      "id": "9",
+      "name": "Beef Stroganoff",
+      "description": "Rich and creamy beef stroganoff with mushrooms and onions.",
+      "ingredients": [
+        {
+          "category": "Meat",
+          "name": "Beef",
+          "amount": 500,
+          "unit": "g"
+        },
+        {
+          "category": "Dairy",
+          "name": "Sour Cream",
+          "amount": 200,
+          "unit": "ml"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Mushrooms",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Onions",
+          "amount": 1,
+          "unit": "whole"
+        }
+      ],
+      "instructions": [
+        "Saute onions and mushrooms until tender.",
+        "Add beef and cook until browned.",
+        "Stir in sour cream and simmer until thickened.",
+        "Serve over noodles or rice."
+      ],
+      "isFavorite": true,
+      "cookingTime": 35,
+      "servings": 4,
+      "difficulty": "Moderate",
+      "category": "Dinner",
+      "imageUrl": "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Chicken Alfredo",
+      "description": "Creamy Alfredo pasta with grilled chicken slices.",
+      "ingredients": [
+        {
+          "category": "Meat",
+          "name": "Chicken Breast",
+          "amount": 300,
+          "unit": "g"
+        },
+        {
+          "category": "Dairy",
+          "name": "Parmesan Cheese",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "category": "Pasta",
+          "name": "Fettuccine",
+          "amount": 500,
+          "unit": "g"
+        },
+        {
+          "category": "Dairy",
+          "name": "Cream",
+          "amount": 200,
+          "unit": "ml"
+        }
+      ],
+      "instructions": [
+        "Grill chicken breasts.",
+        "Cook fettuccine according to package instructions.",
+        "Make Alfredo sauce by combining cream and Parmesan.",
+        "Toss pasta with sauce and top with chicken."
+      ],
+      "isFavorite": true,
+      "cookingTime": 30,
+      "servings": 4,
+      "difficulty": "Easy",
+      "category": "Dinner",
+      "imageUrl": "https://www.justspices.co.uk/media/recipe/resized/510x510/recipe/chicken-alfredo.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Caesar Salad",
+      "description": "Crisp romaine lettuce with Caesar dressing and croutons.",
+      "ingredients": [
+        {
+          "category": "Vegetables",
+          "name": "Romaine Lettuce",
+          "amount": 200,
+          "unit": "g"
+        },
+        {
+          "category": "Dairy",
+          "name": "Parmesan Cheese",
+          "amount": 50,
+          "unit": "g"
+        },
+        {
+          "category": "Bakery",
+          "name": "Croutons",
+          "amount": 100,
+          "unit": "g"
+        },
+        {
+          "category": "Sauces",
+          "name": "Caesar Dressing",
+          "amount": 50,
+          "unit": "ml"
+        }
+      ],
+      "instructions": [
+        "Chop romaine lettuce.",
+        "Toss lettuce with Caesar dressing.",
+        "Top with Parmesan cheese and croutons."
+      ],
+      "isFavorite": true,
+      "cookingTime": 10,
+      "servings": 4,
+      "difficulty": "Easy",
+      "category": "Dinner",
+      "imageUrl": "https://cdn.loveandlemons.com/wp-content/uploads/2024/12/caesar-salad.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Vegetable Stir Fry",
+      "description": "A colorful mix of bell peppers, broccoli, and carrots stir-fried in soy sauce.",
+      "ingredients": [
+        {
+          "category": "Vegetables",
+          "name": "Bell Peppers",
+          "amount": 2,
+          "unit": "whole"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Broccoli",
+          "amount": 1,
+          "unit": "whole"
+        },
+        {
+          "category": "Vegetables",
+          "name": "Carrots",
+          "amount": 2,
+          "unit": "whole"
+        },
+        {
+          "category": "Sauces",
+          "name": "Soy Sauce",
+          "amount": 50,
+          "unit": "ml"
+        }
+      ],
+      "instructions": [
+        "Chop bell peppers, broccoli, and carrots.",
+        "Stir-fry vegetables in a pan with soy sauce.",
+        "Cook until vegetables are tender."
+      ],
+      "isFavorite": true,
+      "cookingTime": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "category": "Dinner",
+      "imageUrl": "https://www.themealdb.com/images/media/meals/1529444830.jpg"
+    }
+  ],
+  "ingredient-categories": [
+    {
+      "id": "1",
+      "name": "Herbs and Spicesss",
+      "ingredients": [
+        {
+          "name": "Basilc"
+        },
+        {
+          "name": "Oregano"
+        },
+        {
+          "name": "Parsley"
+        },
+        {
+          "name": "Rosemary"
+        },
+        {
+          "name": "Thyme"
+        },
+        {
+          "name": "Cilantro"
+        },
+        {
+          "name": "Sage"
+        },
+        {
+          "name": "Paprika"
+        },
+        {
+          "name": "Turmeric"
+        },
+        {
+          "name": "Cumin"
+        },
+        {
+          "name": "Coriander"
+        },
+        {
+          "name": "Chili Powder"
+        },
+        {
+          "name": "Nutmeg"
+        },
+        {
+          "name": "Cardamom"
+        },
+        {
+          "name": "Cloves"
+        },
+        {
+          "name": "Maric"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Pantry Staples",
+      "ingredients": [
+        {
+          "name": "Salt"
+        },
+        {
+          "name": "Pepper"
+        },
+        {
+          "name": "Olive Oil"
+        },
+        {
+          "name": "Vinegar"
+        },
+        {
+          "name": "Flour"
+        },
+        {
+          "name": "Sugar"
+        },
+        {
+          "name": "Rice"
+        },
+        {
+          "name": "Pasta"
+        },
+        {
+          "name": "Canned Tomatoes"
+        },
+        {
+          "name": "Honey"
+        },
+        {
+          "name": "Baking Powder"
+        },
+        {
+          "name": "Yeast"
+        },
+        {
+          "name": "Soy Sauce"
+        },
+        {
+          "name": "Stock Cubes"
+        },
+        {
+          "name": "Coconut Milk"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Meat",
+      "ingredients": [
+        {
+          "name": "Chicken Breast"
+        },
+        {
+          "name": "Ground Beef"
+        },
+        {
+          "name": "Pork Chops"
+        },
+        {
+          "name": "Bacon"
+        },
+        {
+          "name": "Sausage"
+        },
+        {
+          "name": "Lamb"
+        },
+        {
+          "name": "Turkey"
+        },
+        {
+          "name": "Duck"
+        },
+        {
+          "name": "Steak"
+        },
+        {
+          "name": "Veal"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Seafood",
+      "ingredients": [
+        {
+          "name": "Salmon"
+        },
+        {
+          "name": "Shrimp"
+        },
+        {
+          "name": "Tuna"
+        },
+        {
+          "name": "Crab"
+        },
+        {
+          "name": "Lobster"
+        },
+        {
+          "name": "Scallops"
+        },
+        {
+          "name": "Clams"
+        },
+        {
+          "name": "Cod"
+        },
+        {
+          "name": "Tilapia"
+        },
+        {
+          "name": "Anchovies"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Vegetables",
+      "ingredients": [
+        {
+          "name": "Carrot"
+        },
+        {
+          "name": "Broccoli"
+        },
+        {
+          "name": "Cauliflower"
+        },
+        {
+          "name": "Spinach"
+        },
+        {
+          "name": "Lettuce"
+        },
+        {
+          "name": "Tomato"
+        },
+        {
+          "name": "Onion"
+        },
+        {
+          "name": "Garlic"
+        },
+        {
+          "name": "Bell Pepper"
+        },
+        {
+          "name": "Zucchini"
+        },
+        {
+          "name": "Potato"
+        },
+        {
+          "name": "Sweet Potato"
+        },
+        {
+          "name": "Carrotdsa"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Fruits",
+      "ingredients": [
+        {
+          "name": "Apple"
+        },
+        {
+          "name": "Banana"
+        },
+        {
+          "name": "Orange"
+        },
+        {
+          "name": "Mango"
+        },
+        {
+          "name": "Strawberry"
+        },
+        {
+          "name": "Blueberry"
+        },
+        {
+          "name": "Pineapple"
+        },
+        {
+          "name": "Peach"
+        },
+        {
+          "name": "Cherry"
+        },
+        {
+          "name": "Grapes"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Grains and Legumes",
+      "ingredients": [
+        {
+          "name": "Quinoa"
+        },
+        {
+          "name": "Oats"
+        },
+        {
+          "name": "Barley"
+        },
+        {
+          "name": "Lentils"
+        },
+        {
+          "name": "Chickpeas"
+        },
+        {
+          "name": "Kidney Beans"
+        },
+        {
+          "name": "Black Beans"
+        },
+        {
+          "name": "Peas"
+        },
+        {
+          "name": "Couscous"
+        },
+        {
+          "name": "Buckwheat"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Dairy",
+      "ingredients": [
+        {
+          "name": "Milk"
+        },
+        {
+          "name": "Cheese"
+        },
+        {
+          "name": "Yogurt"
+        },
+        {
+          "name": "Butter"
+        },
+        {
+          "name": "Cream"
+        },
+        {
+          "name": "Sour Cream"
+        },
+        {
+          "name": "Cottage Cheese"
+        },
+        {
+          "name": "Feta Cheese"
+        },
+        {
+          "name": "Mozzarella"
+        },
+        {
+          "name": "Parmesan"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Nuts and Seeds",
+      "ingredients": [
+        {
+          "name": "Almonds"
+        },
+        {
+          "name": "Cashews"
+        },
+        {
+          "name": "Walnuts"
+        },
+        {
+          "name": "Pistachios"
+        },
+        {
+          "name": "Pine Nuts"
+        },
+        {
+          "name": "Chia Seeds"
+        },
+        {
+          "name": "Flaxseeds"
+        },
+        {
+          "name": "Sunflower Seeds"
+        },
+        {
+          "name": "Pumpkin Seeds"
+        },
+        {
+          "name": "Sesame Seeds"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Beverages",
+      "ingredients": [
+        {
+          "name": "Water"
+        },
+        {
+          "name": "Coffee"
+        },
+        {
+          "name": "Tea"
+        },
+        {
+          "name": "Juice"
+        },
+        {
+          "name": "Soda"
+        },
+        {
+          "name": "Milkshake"
+        },
+        {
+          "name": "Smoothie"
+        },
+        {
+          "name": "Beer"
+        },
+        {
+          "name": "Wine"
+        },
+        {
+          "name": "Cocktail Mix"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Condiments and Sauces",
+      "ingredients": [
+        {
+          "name": "Ketchup"
+        },
+        {
+          "name": "Mustard"
+        },
+        {
+          "name": "Mayonnaise"
+        },
+        {
+          "name": "Barbecue Sauce"
+        },
+        {
+          "name": "Soy Sauce"
+        },
+        {
+          "name": "Hot Sauce"
+        },
+        {
+          "name": "Salsa"
+        },
+        {
+          "name": "Tahini"
+        },
+        {
+          "name": "Hummus"
+        },
+        {
+          "name": "Pesto"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Sweets and Snacks",
+      "ingredients": [
+        {
+          "name": "Chocolate"
+        },
+        {
+          "name": "Candy"
+        },
+        {
+          "name": "Cookies"
+        },
+        {
+          "name": "Chips"
+        },
+        {
+          "name": "Popcorn"
+        },
+        {
+          "name": "Ice Cream"
+        },
+        {
+          "name": "Granola Bars"
+        },
+        {
+          "name": "Pretzels"
+        },
+        {
+          "name": "Doughnuts"
+        },
+        {
+          "name": "Brownies"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "1",
+      "name": "g"
+    },
+    {
+      "id": "2",
+      "name": "kg"
+    },
+    {
+      "id": "3",
+      "name": "ml"
+    },
+    {
+      "id": "4",
+      "name": "l"
+    },
+    {
+      "id": "5",
+      "name": "tsp"
+    },
+    {
+      "id": "6",
+      "name": "tbsp"
+    },
+    {
+      "id": "7",
+      "name": "cup"
+    },
+    {
+      "id": "8",
+      "name": "oz"
+    },
+    {
+      "id": "9",
+      "name": "lb"
+    },
+    {
+      "id": "10",
+      "name": "piece"
+    }
+  ],
+  "difficultyLevels": [
+    {
+      "id": "1",
+      "name": "Easy"
+    },
+    {
+      "id": "2",
+      "name": "Moderate"
+    },
+    {
+      "id": "3",
+      "name": "Difficult"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Breakfast"
+    },
+    {
+      "id": "2",
+      "name": "Lunch"
+    },
+    {
+      "id": "3",
+      "name": "Dinner"
+    },
+    {
+      "id": "4",
+      "name": "Snack"
+    },
+    {
+      "id": "5",
+      "name": "Dessert"
+    }
+  ],
+  "mealPlan": [
+    {
+      "dayFrom": "2025-01-31T08:14:30.404Z",
+      "dayTo": "2025-02-06T08:14:30.404Z",
+      "days": [
+        {
+          "day": "Monday",
+          "meals": {
+            "breakfast": [
+              {
+                "id": "1",
+                "name": "Spaghetti Bolognese",
+                "description": "A rich and savory pasta dish featuring a slow-cooked tomato and beef sauce served over al dente spaghetti. Garnished with fresh parsley and grated Parmesan cheese.",
+                "ingredients": [
+                  {
+                    "category": "Pantry Staples",
+                    "name": "Spaghetti",
+                    "amount": 0.5,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 0.3,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Herbs and Spices",
+                    "name": "Basil",
+                    "amount": 10,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 500,
+                    "unit": "g",
+                    "bought": false
+                  }
+                ],
+                "instructions": [
+                  "Cook spaghetti until al dente.",
+                  "Prepare the meat sauce with tomatoes, garlic, and spices.",
+                  "Combine and garnish with Parmesan cheese."
+                ],
+                "isFavorite": true,
+                "cookingTime": 45,
+                "servings": 4,
+                "difficulty": "Moderate",
+                "category": "Dinner",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg"
+              }
+            ],
+            "lunch": [
+              {
+                "id": "1",
+                "name": "Spaghetti Bolognese",
+                "description": "A rich and savory pasta dish featuring a slow-cooked tomato and beef sauce served over al dente spaghetti. Garnished with fresh parsley and grated Parmesan cheese.",
+                "ingredients": [
+                  {
+                    "category": "Pantry Staples",
+                    "name": "Spaghetti",
+                    "amount": 0.5,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 0.3,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Herbs and Spices",
+                    "name": "Basil",
+                    "amount": 10,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 500,
+                    "unit": "g",
+                    "bought": false
+                  }
+                ],
+                "instructions": [
+                  "Cook spaghetti until al dente.",
+                  "Prepare the meat sauce with tomatoes, garlic, and spices.",
+                  "Combine and garnish with Parmesan cheese."
+                ],
+                "isFavorite": true,
+                "cookingTime": 45,
+                "servings": 4,
+                "difficulty": "Moderate",
+                "category": "Dinner",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg"
+              }
+            ],
+            "dinner": [
+              {
+                "id": "1",
+                "name": "Spaghetti Bolognese",
+                "description": "A rich and savory pasta dish featuring a slow-cooked tomato and beef sauce served over al dente spaghetti. Garnished with fresh parsley and grated Parmesan cheese.",
+                "ingredients": [
+                  {
+                    "category": "Pantry Staples",
+                    "name": "Spaghetti",
+                    "amount": 0.5,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 0.3,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Herbs and Spices",
+                    "name": "Basil",
+                    "amount": 10,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 500,
+                    "unit": "g",
+                    "bought": false
+                  }
+                ],
+                "instructions": [
+                  "Cook spaghetti until al dente.",
+                  "Prepare the meat sauce with tomatoes, garlic, and spices.",
+                  "Combine and garnish with Parmesan cheese."
+                ],
+                "isFavorite": true,
+                "cookingTime": 45,
+                "servings": 4,
+                "difficulty": "Moderate",
+                "category": "Dinner",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg"
+              }
+            ]
+          }
+        },
+        {
+          "day": "Tuesday",
+          "meals": {
+            "breakfast": [],
+            "lunch": [],
+            "dinner": []
+          }
+        },
+        {
+          "day": "Wednesday",
+          "meals": {
+            "breakfast": [],
+            "lunch": [],
+            "dinner": []
+          }
+        },
+        {
+          "day": "Thursday",
+          "meals": {
+            "breakfast": [],
+            "lunch": [],
+            "dinner": []
+          }
+        },
+        {
+          "day": "Friday",
+          "meals": {
+            "breakfast": [
+              {
+                "id": "1",
+                "name": "Spaghetti Bolognese",
+                "description": "A rich and savory pasta dish featuring a slow-cooked tomato and beef sauce served over al dente spaghetti. Garnished with fresh parsley and grated Parmesan cheese.",
+                "ingredients": [
+                  {
+                    "category": "Pantry Staples",
+                    "name": "Spaghetti",
+                    "amount": 0.5,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 0.3,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Herbs and Spices",
+                    "name": "Basil",
+                    "amount": 10,
+                    "unit": "kg",
+                    "bought": false
+                  },
+                  {
+                    "category": "Meat",
+                    "name": "Ground Beef",
+                    "amount": 500,
+                    "unit": "g",
+                    "bought": false
+                  }
+                ],
+                "instructions": [
+                  "Cook spaghetti until al dente.",
+                  "Prepare the meat sauce with tomatoes, garlic, and spices.",
+                  "Combine and garnish with Parmesan cheese."
+                ],
+                "isFavorite": true,
+                "cookingTime": 45,
+                "servings": 4,
+                "difficulty": "Moderate",
+                "category": "Dinner",
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Espaguetis_carbonara.jpg"
+              }
+            ],
+            "lunch": [],
+            "dinner": []
+          }
+        },
+        {
+          "day": "Saturday",
+          "meals": {
+            "breakfast": [],
+            "lunch": [],
+            "dinner": []
+          }
+        },
+        {
+          "day": "Sunday",
+          "meals": {
+            "breakfast": [],
+            "lunch": [],
+            "dinner": []
+          }
+        }
+      ],
+      "id": "1"
+    }
+  ],
+  "shoppingList": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "name": "Spaghetti",
+          "amount": 0.5,
+          "unit": "kg",
+          "bought": true
+        },
+        {
+          "name": "Spaghetti",
+          "amount": 0.5,
+          "unit": "kg",
+          "bought": true
+        },
+        {
+          "name": "Ground Beef",
+          "amount": 0.6,
+          "unit": "kg",
+          "bought": false
+        },
+        {
+          "name": "Ground Beef",
+          "amount": 1000,
+          "unit": "g",
+          "bought": false
+        },
+        {
+          "name": "Basil",
+          "amount": 20,
+          "unit": "kg",
+          "bought": false
+        }
+      ]
+    }
+  ]
+}

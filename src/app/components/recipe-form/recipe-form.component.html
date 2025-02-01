@@ -1,0 +1,187 @@
+<div class="recipe-form-container" @fadeInOut>
+  <mat-card class="recipe-form-card">
+    <mat-card-header>
+      <mat-card-title>{{ isEditMode ? 'Edit Recipe' : 'Add New Recipe' }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="recipeForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Recipe Name</mat-label>
+          <input matInput formControlName="name" required>
+          <mat-error *ngIf="recipeForm.get('name')?.invalid && recipeForm.get('name')?.touched">
+            Recipe name is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput placeholder="Ex. A creamy pasta with hints of garlic and basil, perfect for a cozy evening..." formControlName="description" rows="3"></textarea>
+        </mat-form-field>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Cooking Time (minutes)</mat-label>
+            <input matInput type="number" formControlName="cookingTime" required>
+            <mat-error *ngIf="recipeForm.get('cookingTime')?.invalid && recipeForm.get('cookingTime')?.touched">
+              Cooking time must be at least 1 minute
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Servings</mat-label>
+            <input matInput type="number" formControlName="servings" required>
+            <mat-error *ngIf="recipeForm.get('servings')?.invalid && recipeForm.get('servings')?.touched">
+              Servings must be at least 1
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>Difficulty</mat-label>
+            <mat-select formControlName="difficulty" required>
+              <mat-option *ngFor="let level of difficultyLevels" [value]="level">
+                {{level}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="recipeForm.get('difficulty')?.invalid && recipeForm.get('difficulty')?.touched">
+              Difficulty is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select [panelClass]="'reverse-panel'" formControlName="category" required>
+              <mat-option *ngFor="let category of categories" [value]="category">
+                {{category}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="recipeForm.get('category')?.invalid && recipeForm.get('category')?.touched">
+              Category is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Image URL</mat-label>
+          <input matInput formControlName="imageUrl">
+        </mat-form-field>
+
+  <div class="ingredients-section">
+    <h3>Ingredients</h3>
+    <div class="ingredient-form" [formGroup]="ingredientsForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <mat-select [panelClass]="'reverse-panel'" formControlName="category">
+          <mat-option *ngFor="let ingredientCategory of ingredientCategoriesNames" 
+                      [value]="ingredientCategory">
+            {{ingredientCategory}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="ingredientsForm.get('category')?.invalid && 
+                          ingredientsForm.get('category')?.touched">
+          Category is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ingredient</mat-label>
+        <mat-select [panelClass]="'reverse-panel'" formControlName="name">
+          <mat-option *ngFor="let ingredient of filteredIngredients" 
+                      [value]="ingredient">
+            {{ingredient}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="ingredientsForm.get('name')?.invalid && 
+                          ingredientsForm.get('name')?.touched">
+          Ingredient is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" formControlName="amount">
+        <mat-error *ngIf="ingredientsForm.get('amount')?.invalid && 
+                          ingredientsForm.get('amount')?.touched">
+          Amount must be greater than 0
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Unit</mat-label>
+        <mat-select formControlName="unit">
+          <mat-option *ngFor="let unit of units" [value]="unit">
+            {{unit}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="ingredientsForm.get('unit')?.invalid && 
+                          ingredientsForm.get('unit')?.touched">
+          Unit is required
+        </mat-error>
+      </mat-form-field>
+
+      <button type="button" mat-fab class="addButton"
+              (click)="addIngredient()" 
+              [disabled]="ingredientsForm.invalid"
+              aria-label="Add ingredient">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    
+  </div>
+
+          <div class="ingredients-list">
+            <div class="ingredient-header" *ngIf="recipeForm.get('ingredients')?.value.length != 0">
+              <div class="ingredient-category">Category</div>
+              <div class="ingredient-name">Name</div>
+              <div class="ingredient-amount">Amount</div>
+              <div class="ingredient-unit">Unit</div>
+              <div class="ingredient-actions"></div>
+            </div>
+            <div *ngFor="let ingredient of recipeForm.get('ingredients')?.value; let i = index" class="ingredient-item" @fadeInOut>
+              <div class="ingredient-category">{{ingredient.category}}</div>
+              <div class="ingredient-name">{{ingredient.name}}</div>
+              <div class="ingredient-amount">{{ingredient.amount}}</div>
+              <div class="ingredient-unit">{{ingredient.unit}}</div>
+              <div class="ingredient-actions">
+                <button type="button" mat-icon-button color="warn" (click)="removeIngredient(i)" aria-label="Remove ingredient">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="instructions-section">
+          <h3>Instructions</h3>
+          <div class="instruction-form">
+            <mat-form-field appearance="outline" class="instruction-input">
+              <mat-label>Add a new instruction</mat-label>
+              <textarea matInput [(ngModel)]="newInstruction" [ngModelOptions]="{standalone: true}" rows="2" placeholder="Enter the next step..."></textarea>
+            </mat-form-field>
+            <button type="button" mat-fab class="addButton" (click)="addInstruction()" aria-label="Add instruction">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+          <div class="instructions-list">
+            <div *ngFor="let instruction of recipeForm.get('instructions')?.value; let i = index" class="instruction-item" @fadeInOut>
+              <div class="instruction-number">{{i + 1}}</div>
+              <div class="instruction-content">
+                <p>{{instruction}}</p>
+                <button type="button" mat-icon-button color="warn" (click)="removeInstruction(i)" aria-label="Remove instruction" >
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+
+          <button mat-flat-button (click)="onSubmit()" class="addButton" [disabled]="recipeForm.invalid">{{isEditMode ? 'Update Recipe' : 'Create Recipe'}}</button>
+          <button mat-button class="button-text" routerLink="/recipe">Cancel</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
